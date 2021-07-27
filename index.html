@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+  <div id="app">
+    <form id="regex-form">
+      <h2>Regular Expressions</h2>
+      <div class="form-group">
+        <label for="target">Target String:</label>
+        <input
+            type="text"
+            id="target"
+            autocomplete="off"
+            required
+            autofocus
+            value="imagem.png"
+          />
+      </div>
+
+      <div class="form-group">
+        <label for="pattern">Pattern (Regex):</label>
+        <input
+            type="text"
+            id="pattern"
+            autocomplete="off"
+            required
+            value=".*png"
+          />
+      </div>
+
+      <div class="checkbox-group">
+        <label>
+            <input type="checkbox" id="showIndex" value="true" />
+            Show Index
+          </label>
+        <label>
+            <input type="checkbox" id="showGroups" value="true" />
+            Show Groups
+          </label>
+      </div>
+
+      <button onclick="onExecuteRegex(event)">
+        Execute Regex
+      </button>
+
+      <hr />
+
+      <div class="form-group">
+        <label id="resultsLabel" for="results">Matches (Results):</label>
+        <input type="text" id="results" readonly />
+      </div>
+
+      <div class="form-group">
+        <label for="highlightText">Highlight:</label>
+        <div id="highlightText" readonly></div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
